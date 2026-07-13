@@ -1,0 +1,27 @@
+<div style="position:relative;width:100%;height:340px;overflow:hidden;background:linear-gradient(135deg,#fce8e6 0%,#f3e8fb 45%,#e6e0fa 100%);border-radius:12px;">
+<div class="cloud c1"></div>
+<div class="cloud c2"></div>
+<div class="cloud c3"></div>
+<div class="cloud c4"></div>
+<div class="spark s1"></div>
+<div class="spark s2"></div>
+<div class="spark s3"></div>
+<style>
+.cloud{position:absolute;image-rendering:pixelated;opacity:0.55;}
+.cloud::before{content:"";display:block;width:100%;height:100%;background-color:#c9b8ea;
+clip-path:polygon(10% 60%,10% 40%,20% 40%,20% 20%,40% 20%,40% 0%,70% 0%,70% 20%,85% 20%,85% 40%,95% 40%,95% 60%,85% 60%,85% 80%,20% 80%,20% 60%);}
+.c1{width:120px;height:56px;top:30px;left:-140px;animation:drift1 34s linear infinite;}
+.c2{width:90px;height:42px;top:110px;left:-140px;animation:drift2 26s linear infinite;animation-delay:-8s;opacity:0.4;}
+.c3{width:150px;height:70px;top:200px;left:-160px;animation:drift1 42s linear infinite;animation-delay:-20s;opacity:0.35;}
+.c4{width:70px;height:33px;top:60px;left:-140px;animation:drift2 20s linear infinite;animation-delay:-4s;opacity:0.5;}
+@keyframes drift1{from{transform:translateX(0);}to{transform:translateX(calc(100vw + 300px));}}
+@keyframes drift2{from{transform:translateX(0);}to{transform:translateX(calc(100vw + 300px));}}
+.spark{position:absolute;width:8px;height:8px;background:#e6c85c;opacity:0.8;
+clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
+animation:twinkle 2.4s ease-in-out infinite;}
+.s1{top:24px;left:60%;animation-delay:0s;}
+.s2{top:200px;left:15%;animation-delay:0.8s;}
+.s3{top:260px;left:80%;animation-delay:1.4s;}
+@keyframes twinkle{0%,100%{opacity:0.2;transform:scale(0.8);}50%{opacity:0.9;transform:scale(1.1);}}
+</style>
+</div>

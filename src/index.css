@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Jersey25';
+  src: url('/Jersey25-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/SNPro-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Jersey25", ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: "Jersey25", ui-monospace, monospace;
+  --font-subtext: "SNPro", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fce8e6 0%, #f3e8fb 45%, #e6e0fa 100%);
+  min-height: 100vh;
+  color: #1e1b4b;
+  font-weight: 900;
+}
+
+* {
+  font-weight: 900;
+}
+
+/* Cloud Animation */
+.cloud{position:absolute;image-rendering:pixelated;opacity:0.55;}
+.cloud::before{content:"";display:block;width:100%;height:100%;background-color:#c9b8ea;
+clip-path:polygon(10% 60%,10% 40%,20% 40%,20% 20%,40% 20%,40% 0%,70% 0%,70% 20%,85% 20%,85% 40%,95% 40%,95% 60%,85% 60%,85% 80%,20% 80%,20% 60%);}
+.c1{width:120px;height:56px;top:30px;left:-140px;animation:drift1 34s linear infinite;}
+.c2{width:90px;height:42px;top:110px;left:-140px;animation:drift2 26s linear infinite;animation-delay:-8s;opacity:0.4;}
+.c3{width:150px;height:70px;top:200px;left:-160px;animation:drift1 42s linear infinite;animation-delay:-20s;opacity:0.35;}
+.c4{width:70px;height:33px;top:60px;left:-140px;animation:drift2 20s linear infinite;animation-delay:-4s;opacity:0.5;}
+@keyframes drift1{from{transform:translateX(0);}to{transform:translateX(calc(100vw + 300px));}}
+@keyframes drift2{from{transform:translateX(0);}to{transform:translateX(calc(100vw + 300px));}}
+.spark{position:absolute;width:8px;height:8px;background:#e6c85c;opacity:0.8;
+clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
+animation:twinkle 2.4s ease-in-out infinite;}
+.s1{top:24px;left:60%;animation-delay:0s;}
+.s2{top:200px;left:15%;animation-delay:0.8s;}
+.s3{top:260px;left:80%;animation-delay:1.4s;}
+@keyframes twinkle{0%,100%{opacity:0.2;transform:scale(0.8);}50%{opacity:0.9;transform:scale(1.1);}}
+
+.pixel-border {
+  box-shadow: 
+    -2px 0 0 0 #000,
+    2px 0 0 0 #000,
+    0 -2px 0 0 #000,
+    0 2px 0 0 #000;
+}
+
+.pixel-border-lg {
+  box-shadow: 
+    -4px 0 0 0 #000,
+    4px 0 0 0 #000,
+    0 -4px 0 0 #000,
+    0 4px 0 0 #000;
+}
+
+/* Google Colors for the logo */
+.text-google-g1 { color: #4285F4; }
+.text-google-o1 { color: #EA4335; }
+.text-google-o2 { color: #FBBC05; }
+.text-google-g2 { color: #4285F4; }
+.text-google-l { color: #34A853; }
+.text-google-e { color: #EA4335; }
