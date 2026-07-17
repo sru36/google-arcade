@@ -176,21 +176,40 @@ export default function App() {
           Ten checkpoints stand between you and enrolment. Clear each level below, collect your credentials, then take on the final boss — the enrolment form itself.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <div className="bg-white pixel-border px-8 py-4 flex items-center gap-4 shadow-sm hover:-translate-y-1 transition-transform">
-            <Calendar className="text-purple-500 w-8 h-8" />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full px-4">
+          <div className="bg-white pixel-border px-6 flex items-center gap-4 shadow-sm hover:-translate-y-1 transition-transform h-[80px] w-full max-w-[380px]">
+            <Calendar className="text-purple-500 w-8 h-8 flex-shrink-0" />
             <div className="text-left">
-              <div className="text-xs text-slate-500 font-bold uppercase tracking-widest">Enrolment window closes</div>
-              <div className="font-pixel text-base text-slate-900 mt-1">13 - 20 JULY 2026</div>
+              <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Enrolment window closes</div>
+              <div className="font-pixel text-sm text-slate-900 mt-1">13 - 20 JULY 2026</div>
             </div>
           </div>
           
-          <a href="https://arcadecalc.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white pixel-border px-8 py-5 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group">
-            <span className="font-pixel text-sm tracking-wider">📊 Track everything on ArcadeCalc</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <a href="https://arcadecalc.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white pixel-border px-6 flex items-center justify-center gap-3 hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group h-[80px] w-full max-w-[380px] relative">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-xl">bar_chart_4_bars</span>
+              <span className="font-pixel text-lg tracking-wider">Track on ArcadeCalc</span>
+            </div>
+            <ArrowRight className="w-6 h-6 absolute right-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+          </a>
+        </div>
+
+        <div className="mt-6 flex justify-center w-full px-4">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLScjkkpNBMs0xR_EvqwLFQZRRVXccQQTLl-pUA37NvzvUQ3NJQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-purple-600 text-white pixel-border px-6 flex items-center justify-center gap-3 hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group h-[80px] w-full max-w-[380px] relative"
+          >
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-xl">how_to_reg</span>
+              <span className="font-pixel text-lg tracking-wider uppercase">Register Now!</span>
+            </div>
+            <ArrowRight className="w-6 h-6 absolute right-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
           </a>
         </div>
       </header>
+
 
       {/* Level Map */}
       <section className="max-w-4xl mx-auto px-4 mb-8 mt-0 relative z-10">
